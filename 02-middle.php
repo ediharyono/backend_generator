@@ -342,7 +342,7 @@ $readme_md_content =
 '
 1. npm init -y
 2. npm install express multer body-parser uuid sequelize nodemon env2 cors mysql2 dotenv --save
-3. cd src, node index.js
+3. cd app, node index.js
 4. browse http://localhost:'.$port.'
 5. Example Body JSON Request 
 
@@ -355,25 +355,25 @@ $content;
 ?>
 <?php
 //membuat folder
-if (!is_dir('cloud-api/middle/src')) {mkdir('cloud-api/middle/src', 0777, true);}
-if (!is_dir('cloud-api/middle/src/config')) {mkdir('cloud-api/middle/src/config', 0777, true);}
-if (!is_dir('cloud-api/middle/src/controllers')) {mkdir('cloud-api/middle/src/controllers', 0777, true);}
-if (!is_dir('cloud-api/middle/src/middleware')) {mkdir('cloud-api/middle/src/middleware', 0777, true);}
-if (!is_dir('cloud-api/middle/src/models')) {mkdir('cloud-api/middle/src/models', 0777, true);}
-if (!is_dir('cloud-api/middle/src/routes')) {mkdir('cloud-api/middle/src/routes', 0777, true);}
+if (!is_dir('cloud-api/middle/app')) {mkdir('cloud-api/middle/app', 0777, true);}
+if (!is_dir('cloud-api/middle/app/config')) {mkdir('cloud-api/middle/app/config', 0777, true);}
+if (!is_dir('cloud-api/middle/app/controllers')) {mkdir('cloud-api/middle/app/controllers', 0777, true);}
+if (!is_dir('cloud-api/middle/app/middleware')) {mkdir('cloud-api/middle/app/middleware', 0777, true);}
+if (!is_dir('cloud-api/middle/app/models')) {mkdir('cloud-api/middle/app/models', 0777, true);}
+if (!is_dir('cloud-api/middle/app/routes')) {mkdir('cloud-api/middle/app/routes', 0777, true);}
  
 ?>
 
 <?php
-$fp = fopen("cloud-api/middle/src/index.js","wb");if( $fp == false ){ }else{ fwrite($fp,$content_index); fclose($fp);}  
-$fp = fopen("cloud-api/middle/src/.env","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_env); fclose($fp);}  
-$fp = fopen("cloud-api/middle/src/config/database.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_database_js); fclose($fp);}
-$fp = fopen("cloud-api/middle/src/controllers/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_controller_js); fclose($fp);}
-$fp = fopen("cloud-api/middle/src/models/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_models_js); fclose($fp);} 
-$fp = fopen("cloud-api/middle/src/routes/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_routes_js); fclose($fp);} 
+$fp = fopen("cloud-api/middle/app/index.js","wb");if( $fp == false ){ }else{ fwrite($fp,$content_index); fclose($fp);}  
+$fp = fopen("cloud-api/middle/app/.env","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_env); fclose($fp);}  
+$fp = fopen("cloud-api/middle/app/config/database.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_database_js); fclose($fp);}
+$fp = fopen("cloud-api/middle/app/controllers/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_controller_js); fclose($fp);}
+$fp = fopen("cloud-api/middle/app/models/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_models_js); fclose($fp);} 
+$fp = fopen("cloud-api/middle/app/routes/".$name_table .".js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_routes_js); fclose($fp);} 
 
-$fp = fopen("cloud-api/middle/src/middleware/logs.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_logs_js); fclose($fp);} 
-$fp = fopen("cloud-api/middle/src/middleware/multer.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_multer_js); fclose($fp);} 
+$fp = fopen("cloud-api/middle/app/middleware/logs.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_logs_js); fclose($fp);} 
+$fp = fopen("cloud-api/middle/app/middleware/multer.js","wb"); if( $fp == false ){ }else{ fwrite($fp,$content_multer_js); fclose($fp);} 
  
 $fp = fopen("cloud-api/middle/Readme.MD","wb"); if( $fp == false ){ }else{ fwrite($fp,$readme_md_content); fclose($fp);} 
 ?>
