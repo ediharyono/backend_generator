@@ -1,4 +1,13 @@
 <?php
+
+$content_readme = "1. npm init-y
+2. npm i express jsonwebtoken uuid
+3. node index.js
+4. post http://localhost:5000/api/login
+5. copy token in respon
+6. get  http://localhost:5000/api/profile";
+
+
 $content_bearer ="
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -84,6 +93,6 @@ app.listen(5000,err=>{
 if (!is_dir('cloud-api/bearer/basic')) {mkdir('cloud-api/bearer/basic', 0777, true);}
  
 $fp = fopen("cloud-api/bearer/basic/index.js","wb");if( $fp == false ){ }else{ fwrite($fp,$content_bearer); fclose($fp);}
- 
+ $fp = fopen("cloud-api/bearer/basic/Readme.MD","wb");if( $fp == false ){ }else{ fwrite($fp,$content_readme); fclose($fp);}
 
 ?>
