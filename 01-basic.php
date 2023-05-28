@@ -37,6 +37,7 @@ $dot  = ".";
 $readme_md = '
 1. npm init -y
 2. npm i --save express dotenv cors sequelize mysql2 mysql
+3. node api_'.$name_table.'.js
 ';
 
 ?>
