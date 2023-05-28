@@ -96,17 +96,7 @@ app.get('/".$name_table."', function (req, res) {
         }
     });
 });
-///Delete///
-//Delete the ".$name_table." Data based on Id  
-app.delete('/".$name_table."/:".$columnid."',(req,res)=>{  
-    mysqlConnection.query('DELETE FROM ".$name_table." WHERE ".$columnid." = ?',[req.params.nim],(err,rows,fields)=>{  
-    if(!err)   
-    res.send(".$strs."Data Deletion Successful".$strs.");  
-    else  
-        console.log(err);  
-      
-})  
-});  
+
 ///////////
 ";
 ?>
